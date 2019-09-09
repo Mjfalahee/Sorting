@@ -11,15 +11,16 @@ def selection_sort( arr ):
         # print('Smallest Element', arr[smallest_index])
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
-        for j in range(smallest_index, len(arr)):
+        for j in range(cur_index, len(arr)):
             if arr[j] < arr[smallest_index]:
-                smallest = j
-                # print('conditional index', smallest)
-                # print('conditional element', arr[smallest])
+                smallest_index = j
+                # print('conditional index', smallest_index)
+                # print('conditional element', arr[smallest_index])
 
         # TO-DO: swap
-                arr[smallest_index], arr[smallest] = arr[smallest], arr[smallest_index]
-                # print(arr)
+
+        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
+        # print(arr)
 
 
 
