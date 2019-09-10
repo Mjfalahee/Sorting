@@ -22,23 +22,30 @@ def merge( arrA, arrB ):
                 value = arrA.pop(0)
                 merged_arr[i] = value
             
-    print('merged', merged_arr)
     return merged_arr
 
-merge([1,3,4,7], [2,5,6,8])
+# print(merge([0,2,4,6], [1,3,5,7]))
 # TO-DO: implement the Merge Sort function below USING RECURSION
-# base case is an array of size 1
-# divide everything up
-# sort those
 def merge_sort( arr ):
     # TO-DO
+    # print(arr)
+    length = len(arr)
+    #base-case len(arr) <= 1
+    if len(arr) <= 1:
+        return arr
+    else:
+        first_half = arr[:length//2]
+        second_half = arr[length//2:]
 
-    return arr
+        arr1 = merge_sort(first_half)
+        arr2 = merge_sort(second_half)
 
+        return merge(arr1, arr2)
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
     # TO-DO
+    
 
     return arr
 
